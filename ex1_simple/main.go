@@ -6,10 +6,10 @@ import (
 	"time"
 )
 
-func tightLoop() {
+func infiniteLoop() {
 	fmt.Println("Goroutine 1 starting")
 	for {
-		// Tight loop with no function calls or yielding
+		// Infinite loop with no function calls or yielding
 	}
 }
 
@@ -17,8 +17,8 @@ func main() {
 	// Limit the scheduler to 1 OS thread
 	runtime.GOMAXPROCS(1)
 
-	// Start a long-running goroutine with a tight loop
-	go tightLoop()
+	// Start a long-running goroutine with a infinite loop
+	go infiniteLoop()
 
 	// Start another goroutine
 	go func() {

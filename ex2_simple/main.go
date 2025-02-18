@@ -9,8 +9,8 @@ import (
 func tightLoop() {
 	fmt.Println("Goroutine 1 starting")
 	for {
-		fmt.Println("Goroutine 1 running")
-		time.Sleep(1 * time.Second)
+		// just add any function call
+		fmt.Sprint()
 	}
 }
 
